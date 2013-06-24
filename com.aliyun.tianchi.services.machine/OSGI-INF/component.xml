@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.aliyun.services.machines">
+   <reference bind="setRestServiceApp" cardinality="1..1" interface="com.aliyun.tianchi.runtime.rest.IRestServiceApplication" name="IRestServiceApplication" policy="static"/>
+   <implementation class="com.aliyun.tianchi.services.machine.internal.MachineResourceComponent"/>
+</scr:component>
