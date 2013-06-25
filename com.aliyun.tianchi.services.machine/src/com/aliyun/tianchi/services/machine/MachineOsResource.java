@@ -19,7 +19,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
+
 
 
 @Path("/machines/{machineSN}/os")
@@ -76,6 +77,7 @@ public class MachineOsResource {
 		String responseData = null;
 		try {
 			String result = Amory.retriveMachineOsInfo(this.machineTag);
+			System.out.println(result);
 			List<Map<String,String>> machineOsDatas = null;
 			Map<String, Object>  resultMap = objectMapper.readValue(result,Map.class);
 			machineOsDatas = (List<Map<String, String>>) resultMap.get("data");
@@ -88,6 +90,7 @@ public class MachineOsResource {
 			e.printStackTrace();
 		}
 		return Response.ok().entity(responseData).build();
+//		return new MachineOsEntity();
 		
 	}
 	

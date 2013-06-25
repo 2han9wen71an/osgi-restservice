@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="osgi-rest" sequenceNumber="46">
+<?pde version="3.8"?><target name="osgi-rest" sequenceNumber="51">
 <locations>
 <location path="${workspace_loc:/bundle-repository/jersey-2.0}" type="Directory"/>
 <location path="${workspace_loc:/bundle-repository/equinox-SDK-Kepler}" type="Directory"/>
-<location path="${workspace_loc:/bundle-repository/jackson}" type="Directory"/>
 <location path="${workspace_loc:/bundle-repository/HttpComponents}" type="Directory"/>
+<location path="${workspace_loc:/bundle-repository/jackson-1.9}" type="Directory"/>
 </locations>
 </target>

@@ -11,14 +11,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.codehaus.jackson.map.ObjectMapper;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 @Path("/machines")
-public class MachineResourceImpl{
+public class MachineResource{
 	private static ObjectMapper objectMapper = new ObjectMapper();
 	private MachineEntity entity = new MachineEntity();
-	public MachineResourceImpl(){
+	public MachineResource(){
 		
 		
 	}

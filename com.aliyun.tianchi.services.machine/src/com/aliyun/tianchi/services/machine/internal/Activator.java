@@ -8,7 +8,7 @@ import org.osgi.util.tracker.ServiceTracker;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
 import com.aliyun.tianchi.runtime.rest.IRestServiceApplication;
-import com.aliyun.tianchi.services.machine.MachineResourceImpl;
+import com.aliyun.tianchi.services.machine.MachineResource;
 
 public class Activator implements BundleActivator,ServiceTrackerCustomizer<EventAdmin,EventAdmin> {
 

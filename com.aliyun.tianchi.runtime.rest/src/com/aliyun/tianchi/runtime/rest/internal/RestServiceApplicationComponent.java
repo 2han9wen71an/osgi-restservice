@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 
+import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.osgi.service.component.ComponentContext;
@@ -23,6 +24,7 @@ public class RestServiceApplicationComponent implements IRestServiceApplication 
 	}
 	public void setHttpService(HttpService service){
 		try {
+			this.serviceClasses.add(JacksonFeature.class);
 			service.registerServlet("/test", container, null, null);
 			
 		} catch (ServletException | NamespaceException e) {
