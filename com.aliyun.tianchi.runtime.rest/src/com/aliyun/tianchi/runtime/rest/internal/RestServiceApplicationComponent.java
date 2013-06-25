@@ -2,6 +2,8 @@ package com.aliyun.tianchi.runtime.rest.internal;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 
@@ -16,8 +18,8 @@ import com.aliyun.tianchi.runtime.rest.IRestServiceApplication;
 public class RestServiceApplicationComponent implements IRestServiceApplication {
 	private Set<Class<?>> serviceClasses = new HashSet<Class<?>>();
 	private ServletContainer container = new ServletContainer(new ResourceConfig());
+	private Logger logger = Logger.getLogger(RestServiceApplicationComponent.class.getName());
 	public void activate(ComponentContext context){
-		
 	}
 	public void setHttpService(HttpService service){
 		try {

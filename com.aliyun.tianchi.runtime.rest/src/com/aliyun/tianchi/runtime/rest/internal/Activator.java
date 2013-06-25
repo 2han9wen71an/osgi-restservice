@@ -2,6 +2,8 @@ package com.aliyun.tianchi.runtime.rest.internal;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -17,7 +19,8 @@ import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
 
 public class Activator implements BundleActivator{
-
+	
+	private Logger logger = Logger.getLogger(Activator.class.getName());
 	private static BundleContext context;
 	private ServiceTracker<EventAdmin,EventAdmin> eventAdminServiceTracker = null;
 	private ServiceTracker<HttpService,HttpService> httpServiceTracker = null;
@@ -33,6 +36,7 @@ public class Activator implements BundleActivator{
 	public void start(BundleContext bundleContext) throws Exception {
 		
 		Activator.context = bundleContext;
+		logger.log(Level.INFO, "--------");
 //		httpServiceTracker = new ServiceTracker<HttpService, HttpService>(Activator.context,HttpService.class.getName(),new HttpServiceTrackerCustomizer());
 //		this.httpServiceTracker.open();
 		
